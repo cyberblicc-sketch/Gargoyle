@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #f4f4f5;
+  background: #05080d;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background-image: url("/static/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #7f5af0;
+  color: #ffffff;
+  padding: 0.8rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cta-button.small {
+  width: fit-content;
+}
+
+main section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-grid,
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-item,
+.pricing-card,
+.result-box {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.feature-item h3,
+.pricing-card h3 {
+  color: #7f5af0;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  color: #facc15;
+  margin-bottom: 0.5rem;
+}
+
+.popular {
+  border-color: #7f5af0;
+}
+
+.contact form {
+  display: grid;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #f8fafc;
+  font: inherit;
+}
+
+.result-box {
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: inherit;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+}
