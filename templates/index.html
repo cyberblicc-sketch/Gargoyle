@@ -1,1 +1,55 @@
-<HTML CONTENT HERE>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gargoyle | AI Shadow Consultant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Gargoyle logo" class="logo" />
+      <h1>Master the Maze.</h1>
+      <p class="tagline">Multi-agent AI for legal, regulatory, and strategic analysis.</p>
+      <a href="#demo" class="cta-button">Run Demo</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <h2>Why Gargoyle</h2>
+    <div class="feature-grid">
+      <div class="feature-item"><h3>Jurist</h3><p>Analyze legal and regulatory constraints with a structured reasoning flow.</p></div>
+      <div class="feature-item"><h3>Cartographer</h3><p>Map patents, adjacent ideas, and whitespace opportunities.</p></div>
+      <div class="feature-item"><h3>Strategist</h3><p>Simulate options and compare risk-adjusted paths before you move.</p></div>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <h2>Pricing</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card"><h3>Starter</h3><p class="price">$29/mo</p><p>Jurist + Cartographer</p></div>
+      <div class="pricing-card popular"><h3>Pro</h3><p class="price">$59/mo</p><p>Adds Strategist and unlimited projects</p></div>
+      <div class="pricing-card"><h3>Enterprise</h3><p class="price">Custom</p><p>Dedicated environment and integrations</p></div>
+    </div>
+  </section>
+
+  <section id="demo" class="contact">
+    <h2>Interactive Demo</h2>
+    <form id="contact-form">
+      <label for="query">Strategic query</label>
+      <textarea id="query" name="query" rows="5" placeholder="How should a fintech startup reduce regulatory friction when launching in multiple states?"></textarea>
+      <button type="submit" class="cta-button small">Run analysis</button>
+    </form>
+    <div id="result" class="result-box" hidden>
+      <h3>Demo output</h3>
+      <pre id="result-text"></pre>
+    </div>
+  </section>
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>
