@@ -3,102 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gargoyle – AI Shadow Consultant</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="logo.png">
+  <title>Gargoyle | AI Shadow Consultant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <header class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
-      <img src="logo.png" alt="Gargoyle Logo" class="logo">
-      <h1>Gargoyle</h1>
-      <p class="tagline">Your AI Shadow Consultant for Strategy & Legal Mastery</p>
-      <a href="#pricing" class="cta-button">Get Started</a>
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Gargoyle logo" class="logo">
+      <h1>Master the Maze.</h1>
+      <p class="tagline">Multi-agent AI for legal, regulatory, patent, and strategic analysis.</p>
+      <a href="#demo" class="cta-button">Run Demo</a>
     </div>
   </header>
 
-  <section class="features">
-    <h2>Why Gargoyle?</h2>
-    <div class="feature-grid">
-      <div class="feature-item">
-        <h3>Multi‑Agent Legal Engine</h3>
-        <p>Harness a team of specialized AI agents that decompose legal questions, search authoritative sources and deliver accurate strategies【139736145795859†L49-L64】.</p>
+  <main>
+    <section class="features">
+      <h2>Why Gargoyle</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>Jurist</h3>
+          <p>Analyze legal and regulatory constraints with a structured reasoning flow.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Cartographer</h3>
+          <p>Map patents, adjacent ideas, and whitespace opportunities.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Strategist</h3>
+          <p>Simulate options and compare risk-adjusted paths before you move.</p>
+        </div>
       </div>
-      <div class="feature-item">
-        <h3>Knowledge Graph & Patent Mapper</h3>
-        <p>Visualize connections between patents, companies and technologies.  Discover white‑space opportunities and avoid infringement risks.</p>
-      </div>
-      <div class="feature-item">
-        <h3>Strategic Simulator</h3>
-        <p>Model adversarial scenarios, competitor moves and regulatory responses with game‑theoretic simulations.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="pricing" id="pricing">
-    <h2>Pricing</h2>
-    <p>Half the cost of typical legal research tools and advisors.</p>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <h3>Starter</h3>
-        <p class="price">$29 / month</p>
-        <ul>
-          <li>Access to Jurist & Cartographer agents</li>
-          <li>Up to 3 projects</li>
-          <li>Email support</li>
-        </ul>
-        <a href="#" class="cta-button small">Start Trial</a>
+    <section class="pricing">
+      <h2>Pricing</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <p class="price">$29/mo</p>
+          <p>Jurist + Cartographer</p>
+        </div>
+        <div class="pricing-card popular">
+          <h3>Pro</h3>
+          <p class="price">$59/mo</p>
+          <p>Adds Strategist and unlimited projects</p>
+        </div>
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <p class="price">Custom</p>
+          <p>Dedicated environment and integrations</p>
+        </div>
       </div>
-      <div class="pricing-card popular">
-        <h3>Pro</h3>
-        <p class="price">$59 / month</p>
-        <ul>
-          <li>All Starter features</li>
-          <li>Strategist simulations</li>
-          <li>Unlimited projects</li>
-          <li>Priority support</li>
-        </ul>
-        <a href="#" class="cta-button small">Start Trial</a>
-      </div>
-      <div class="pricing-card">
-        <h3>Enterprise</h3>
-        <p class="price">Custom</p>
-        <ul>
-          <li>Dedicated orchestration & compliance</li>
-          <li>Custom agents & integrations</li>
-          <li>SLA & white‑glove onboarding</li>
-        </ul>
-        <a href="#" class="cta-button small">Contact Us</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Have questions? Ready to scale your strategy?  Fill out the form and our team will get back to you.</p>
-    <form id="contact-form">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="4"></textarea>
-      </div>
-      <button type="submit" class="cta-button small">Send Message</button>
-      <p class="disclaimer">For educational & marketing purposes only.  Not a law firm.</p>
-    </form>
-  </section>
+    <section id="demo" class="contact">
+      <h2>Interactive Demo</h2>
+      <form id="contact-form">
+        <label for="query">Strategic query</label>
+        <textarea id="query" name="query" rows="5" placeholder="How should a fintech startup reduce regulatory friction when launching in multiple states?"></textarea>
+        <button type="submit" class="cta-button small">Run analysis</button>
+      </form>
 
-  <footer>
-    <p>&copy; 2026 Gargoyle.  All rights reserved.</p>
-  </footer>
+      <div id="result" class="result-box" hidden>
+        <h3>Demo output</h3>
+        <pre id="result-text"></pre>
+      </div>
+    </section>
+  </main>
 
-  <script src="script.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
