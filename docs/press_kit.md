@@ -9,15 +9,15 @@
 - **Long boilerplate:** Gargoyle (est. 2026) empowers organisations to navigate regulatory and strategic labyrinths with unprecedented efficiency.  By combining large‑context language models with graph analytics and simulation, Gargoyle’s agents provide accurate, creative and cost‑effective advice.  It is designed for startups, law firms and corporate innovators seeking to accelerate compliance, uncover patentable white space and outmanoeuvre competitors.
 
 ## Key Features
-- **Multi‑Agent Legal Engine**: Reduces hallucinations and improves factual accuracy by decomposing queries and verifying evidence【139736145795859†L49-L64】.
+- **Multi‑Agent Legal Engine**: Reduces hallucinations and improves factual accuracy by decomposing queries and verifying evidence.
 - **Knowledge Graph & Patent Mapper**: Visualises relationships between patents, companies and technologies, enabling rapid prior‑art discovery and freedom‑to‑operate analysis.
 - **Strategic Simulator**: Runs adversarial models to test strategies against regulatory responses and competitor behaviour.
 - **Affordable Pricing**: Starter plan at $29/month; Pro at $59; Enterprise custom—roughly half the cost of typical legal research tools.
 - **Privacy & Compliance**: Local processing; supports integration of quantum‑safe certificates for tamper‑proof reporting.
 
 ## Competitive Advantage
-The global AI agent market is growing at a CAGR of **46 %** and projected to reach **$52.62 B** by 2030【287405303313922†L53-L60】.  While legacy providers offer document search and analytics, Gargoyle differentiates itself through:
-- **Multi‑agent orchestration** that reduces hallucination and ensures reliability【139736145795859†L49-L64】.
+The global AI agent market is growing at a CAGR of **46 %** and projected to reach **$52.62 B** by 2030.  While legacy providers offer document search and analytics, Gargoyle differentiates itself through:
+- **Multi‑agent orchestration** that reduces hallucination and ensures reliability.
 - **Semantic patent mapping** to find opportunities and avoid infringement.
 - **Game‑theoretic simulations** for proactive strategy.
 - **Transparent pricing** at a fraction of the cost of incumbent tools.
